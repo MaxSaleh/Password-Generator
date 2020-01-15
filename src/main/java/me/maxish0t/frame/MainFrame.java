@@ -32,12 +32,6 @@ public class MainFrame extends JPanel
         super.paintComponent(g);
 
 
-        JButton jButton = new JButton("Click me");
-        jButton.setBounds((Constants.FRAME_WIDTH / 2) - 50, 100, 100, 50);
-        jButton.setVisible(true);
-        add(jButton);
-
-
         // Password Generated Text Box
         passwordGenBox.setFont(new java.awt.Font("Keep Calm Med", 2, 30)); // NOI18N
         passwordGenBox.setBounds((Constants.FRAME_WIDTH / 2) - (300 / 2), 0, 300, 100);
@@ -60,21 +54,6 @@ public class MainFrame extends JPanel
             }
         });
         add(changeGenPassword);
-
-        JToggleButton toggleButton = new JToggleButton("Click Me");
-        toggleButton.setBounds(0, 0, 50, 50);
-        ItemListener itemListener = new ItemListener() {
-            public void itemStateChanged(ItemEvent itemEvent) {
-                int state = itemEvent.getStateChange();
-                if (state == ItemEvent.SELECTED) {
-                    System.out.println("Selected"); // show your message here
-                } else {
-                    System.out.println("Deselected"); // remove your message
-                }
-            }
-        };
-        toggleButton.addItemListener(itemListener);
-        //add(toggleButton);
 
         // Background JPanel
         backgroundColor.setBounds(0, 0, Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
